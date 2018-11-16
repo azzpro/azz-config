@@ -1,10 +1,8 @@
-server:
-  tomcat:
+server: 
+  tomcat: 
     uri-encoding: UTF-8
   max-http-header-size: 4048576
-spring:
-  messages:
-    basename: i18n/Messages
+spring: 
   zipkin:
     enabled: true
     base-url: http://localhost:7777/
@@ -23,7 +21,7 @@ spring:
     username: root
     password: azz2025
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://120.78.162.226:3306/azz_test?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+    url: jdbc:mysql://120.78.162.226:3306/azz_dev?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
     driver-class-name: com.mysql.jdbc.Driver
     dbcp2:
       min-idle: 5
@@ -44,13 +42,13 @@ azz-sequence-service:  #序列服务
     OkToRetryOnAllOperations: false
     MaxAutoRetriesNextServer: 0
     MaxAutoRetries: 0
-azz-system-service:  #系统服务
+azz-system-service:  #系统服务服务
   ribbon:
     ConnectTimeout: 2000
     ReadTimeout: 5000
     OkToRetryOnAllOperations: false
     MaxAutoRetriesNextServer: 0
-    MaxAutoRetries: 0 
+    MaxAutoRetries: 0
 eureka:
   client:
     service-url:
@@ -58,8 +56,9 @@ eureka:
   instance:
     prefer-ip-address: true
     instance-id: ${spring.cloud.client.ipAddress}:${spring.application.name}:${spring.application.instance_id:${server.port}}
-
+      
+      
 mybatis:
   config-location: classpath:mybatis/mybatis-config.xml
   mapper-locations: classpath:mapping/**/*.xml
-
+      
