@@ -108,6 +108,14 @@ azz:
      type: MerchantTenantCodeSequence
      args: {id: 'IC', maxSequenceValue: '99999999', length: '8', step: '5'}
     -
+     id: ClientInvoiceApplySequence
+     type: ClientInvoiceApplyCodeSequence
+     args: {id: 'CI', maxSequenceValue: '99999999', length: '8', step: '5'}
+    -
+     id: MerchantInvoiceApplySequence
+     type: MerchantInvoiceApplyCodeSequence
+     args: {id: 'MI', maxSequenceValue: '99999999', length: '8', step: '5'}
+    -
      id: random
      type: randomSequence
      args: {length: '6'}
